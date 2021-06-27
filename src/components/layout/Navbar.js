@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavbarCustom = () => {
     return ( 
@@ -19,8 +20,8 @@ const NavbarCustom = () => {
                        
                             <i class="fas fa-chevron-circle-down"></i>
                             <div id="myDropdown" class="dropdown-content">
-                                <a href="#">Profile</a>
-                                <a href="#" className='logout'>Log out</a>
+                                <Link to="/">Profile</Link>
+                                <Link to="/" className='logout'>Log out</Link>
                             </div>
                         </span>
                     </div>

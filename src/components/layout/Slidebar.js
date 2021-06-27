@@ -3,7 +3,7 @@ const Slidebar = () => {
 
     return (
         <section className="sidenav">
-            <Link to="/about"> <img src="/images/dashboard.png" alt="dashboard" className="dashboard" />Dashboard</Link>
+            <Link to="/"> <img src="/images/dashboard.png" alt="dashboard" className="dashboard" />Dashboard</Link>
             <Link to="/products"> <img src="/images/product.png" alt="dashboard" className="dashboard" />Products</Link>
             <Link to="/accounts"> <img src="/images/account.png" alt="dashboard" className="dashboard" />Accounts</Link>
             <Link to="/promotes"> <img src="/images/promote.png" alt="dashboard" className="dashboard" />Promotes</Link>

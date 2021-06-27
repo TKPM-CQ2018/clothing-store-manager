@@ -249,3 +249,135 @@ i {
     font-weight: 600;
     opacity: 30%;
 }
+
+
+/* Dashboard */
+
+.card {
+    padding: 15px;
+}
+
+section.dashboard {
+    top: 90px;
+    position: absolute;
+    left: 300px;
+}
+
+section.dashboard .title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+section.dashboard section.arrow-card {
+    display: flex;
+}
+
+section.dashboard section.arrow-card .card {
+    border-radius: 10px;
+    border: none;
+    margin-left: 25px;
+}
+
+section.dashboard section.arrow-card .card .card-body {
+    padding-top: 0px;
+    margin-top: -35px;
+}
+
+section.dashboard section.arrow-card .card .card-title {
+    font-weight: 600;
+    opacity: 50%;
+    font-size: 16px;
+}
+
+section.dashboard section.arrow-card .card .card-body .dong {
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+section.dashboard section.arrow-card .card img.card-img-top {
+    width: 70px;
+    height: 70px;
+}
+
+section.dashboard section.arrow-card .card .tagline img.trending,
+section.dashboard section.arrow-card .card .tagline div.percents,
+section.dashboard section.arrow-card .card .tagline div.timefromnow {
+    display: inline;
+    font-weight: 600;
+}
+
+section.dashboard section.arrow-card .card .tagline img.trending {
+    padding-right: 5px;
+}
+
+section.dashboard section.arrow-card .card .tagline div.percents {
+    padding-right: 10px;
+    color: #42EB8F;
+    font-size: 18px;
+}
+
+section.dashboard section.arrow-card .card .tagline div.percents.down {
+    color: #FE1010;
+}
+
+section.dashboard section.arrow-card .card .tagline div.timefromnow {
+    opacity: 50%;
+    padding-right: 90px;
+}
+
+section.dashboard section.arrow-card .card .card-body .card-text {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+section.dashboard section.arrow-card .card .cardheader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+/* Sale detail */
+
+section.sale-list.card {
+    margin: 25px 0 25px 25px;
+}
+
+section.sale-list.card table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+section.sale-list.card table.table.table-striped.table-hover thead tr.title-row {
+    background-color: #C4C4C4;
+    opacity: 47%;
+}
+
+section.sale-list.card table.table.table-striped.table-hover tbody tr.info-row th {
+    font-weight: 100;
+}
+
+section.sale-list.card table.table.table-striped.table-hover tbody tr.info-row th.status div {
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+section.sale-list.card table.table.table-striped.table-hover tbody tr.info-row th.status.delivered div {
+    background-color: lightgreen;
+}
+
+section.sale-list.card table.table.table-striped.table-hover tbody tr.info-row th.status.soldout div {
+    background-color: #FE1010;
+}
+
+section.sale-list.card table.table.table-striped.table-hover tbody tr.info-row th.product img.avatar-product {
+    height: 10px;
+    height: 33px;
+    width: 33px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
