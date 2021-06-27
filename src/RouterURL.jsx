@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import { ProductsData } from "./product-data";
+import AddProductPage from "./pages/addProductPage/AddProductPage.jsx"
 
 export default function RouterURL() {
   return (
@@ -10,7 +11,7 @@ export default function RouterURL() {
       <Router>
         <div>
           <Route exact path="/products" component={ProductsPage} />
-
+          <Route exact path="/products/add" component={AddProductPage} />
           <Route exact path="/products/001">
             <ProductDetailPage
               key={ProductsData[0].id}

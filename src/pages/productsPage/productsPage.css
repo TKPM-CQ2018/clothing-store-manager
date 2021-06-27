@@ -8,8 +8,8 @@
 }
 
 .products .container {
-  width: calc(100vw - 276px);
-  height: calc(100vh - 74px);
+  width: calc(100vw - 278px);
+  min-height: calc(100vh);
   position: absolute;
   left: 276px;
   top: 74px;

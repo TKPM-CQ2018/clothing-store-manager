@@ -20,7 +20,7 @@ export default function ProductsPage() {
       <div className="container">
         <div className="top">
           <h1>Products</h1>
-          <a href="#add">Add product</a>
+          <a href="/products/add">Add product</a>
         </div>
 
         <div className="filter">
