@@ -1,0 +1,251 @@
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.header .my-container {
+    position: absolute;
+    z-index: 1;
+}
+
+i {
+    font-size: 25px;
+}
+
+.my-container {
+    width: 100%;
+    margin: auto;
+    padding: 0 24px;
+    background-color: white;
+}
+
+.my-container::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.header .signin-button,
+.header .login-button,
+.header .profile,
+.header .notification {
+    margin: 15px 15px;
+    float: right;
+}
+
+.header .logo {
+    height: auto;
+    margin-top: 5px;
+    float: left;
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header .logo .chat {
+    color: rgb(255, 215, 0);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header .input-group.mb-3 {
+    width: calc(100% - 400px);
+    margin: auto;
+    display: inline-flex;
+    padding: 0 100px;
+    margin-top: 15px;
+    float: right;
+}
+
+.header .input-group.mb-3 .input-group-text {
+    border-radius: 5px 0 0 5px;
+}
+
+.header .logo,
+.header .profile,
+.header .notification {
+    display: inline;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header .login-button button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: aliceblue;
+}
+
+.header button:hover {
+    opacity: 70%;
+}
+
+.header .logo:hover img {
+    cursor: pointer;
+}
+
+.header .form-control,
+.header .input-group-text {
+    background-color: rgba(190, 190, 190, 0.863);
+    border: none;
+}
+
+.header .search i,
+.header .cart i {
+    font-size: 25px;
+}
+
+.header .info {
+    position: absolute;
+    right: 55px;
+    top: 16%;
+}
+
+.header .profile {
+    margin-right: 115px;
+}
+
+.header .profile .image,
+.header .info {
+    display: inline;
+}
+
+.header .profile .image img {
+    border-radius: 50%;
+    height: 37px;
+}
+
+.header .profile .info .role {
+    color: grey;
+    font-size: 12px;
+    text-align: left;
+}
+
+.header .profile .info .name .dropdown i {
+    font-size: 15px;
+    top: 0px;
+    position: absolute;
+    padding-left: 5px;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Dropdown button on hover & focus */
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -40px;
+    top: 15px;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a.logout {
+    color: red;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #EBDC3F;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+.show {
+    display: block;
+}
+
+
+/* Section sidebar */
+
+.sidenav {
+    height: 100%;
+    width: 278px;
+    position: fixed;
+    z-index: 1;
+    top: 68px;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 13px 8px 13px 35px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    font-weight: 600;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #EBDC3F;
+    transform: scale(1.10);
+    transition: all 0.2s;
+}
+
+.sidenav a:hover img {}
+
+.sidenav a img {
+    padding-right: 20px;
+}
+
+.title-field-sidebar {
+    color: dimgray;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 30%;
+}
