@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.products {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.products .container {
+  width: calc(100vw - 278px);
+  min-height: calc(100vh);
+  position: absolute;
+  left: 276px;
+  top: 74px;
+  padding: 10px 40px;
+  background-color: #ededed;
+}
+
+.products .container .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products .container .top h1 {
+  font-size: 20px;
+}
+
+.products .container .top a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.products .container .filter {
+  height: auto;
+}
+
+.products .container .filter ul {
+  display: flex;
+  width: 615px;
+  height: 30px;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.products .container .filter ul li {
+  list-style: none;
+  height: inherit;
+  align-items: center;
+}
+
+.products .filter ul .icon-list {
+  display: flex;
+  height: inherit;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  border-right: #d7d7d7 solid 0.1px;
+}
+
+.products .filter ul .filter-by {
+  border-right: #d7d7d7 solid 0.1px;
+  width: 100px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.products .filter ul .type {
+  width: 160px;
+}
+
+.products .filter ul .type select {
+  width: 160px;
+  height: 30px;
+  border: none;
+  font-size: 14px;
+  border-right: #d7d7d7 solid 0.1px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.products .filter ul .type select option {
+  font-size: 15px;
+}
+
+.products .filter ul .type select:focus {
+  outline: none;
+}
+
+.products .filter ul .status {
+  width: 160px;
+}
+
+.products .filter ul .status select {
+  width: 160px;
+  height: 30px;
+  border: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  border-right: #d7d7d7 solid 0.1px;
+  cursor: pointer;
+}
+
+.products .filter ul .status select option {
+  font-size: 15px;
+}
+
+.products .filter ul .status select:focus {
+  outline: none;
+}
+
+.products .filter ul .reset-filter {
+  display: flex;
+  background-color: #ffd3c6;
+  color: #fe4910;
+  width: 151px;
+  border-radius: 0 6px 6px 0;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.products .title {
+  position: relative;
+  margin-top: 10px;
+  height: 30px;
+  background-color: #c4c4c4;
+  border-radius: 5px 5px 0 0;
+  width: 98.35%;
+}
+
+.products .title ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.products .title ul li {
+  list-style: none;
+  font-weight: 700;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  overflow-y: scroll;
+}
