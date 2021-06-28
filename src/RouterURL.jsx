@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import { ProductsData } from "./product-data";
-import AddProductPage from "./pages/addProductPage/AddProductPage.jsx"
+import AddProductPage from "./pages/addProductPage/AddProductPage.jsx";
+import StaffsPage from "./pages/staffsPage/StaffsPage.jsx";
+import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
+import { StaffData } from "./staff-data";
 
 export default function RouterURL() {
   return (
@@ -11,6 +14,10 @@ export default function RouterURL() {
       <Router>
         <div>
           <Route exact path="/products" component={ProductsPage} />
+          <Route exact path="/staffs" component={StaffsPage} />
+          <Route exact path="/staffs/001">
+            <StaffDetailPage key={StaffData[0].id} staff={StaffData[0]} />
+          </Route>
           <Route exact path="/products/add" component={AddProductPage} />
           <Route exact path="/products/001">
             <ProductDetailPage
@@ -18,28 +25,24 @@ export default function RouterURL() {
               product={ProductsData[0]}
             />
           </Route>
-
           <Route exact path="/products/002">
             <ProductDetailPage
               key={ProductsData[1].id}
               product={ProductsData[1]}
             />
           </Route>
-
           <Route exact path="/products/003">
             <ProductDetailPage
               key={ProductsData[2].id}
               product={ProductsData[2]}
             />
           </Route>
-
           <Route exact path="/products/004">
             <ProductDetailPage
               key={ProductsData[3].id}
               product={ProductsData[3]}
             />
           </Route>
-
           <Route exact path="/products/005">
             <ProductDetailPage
               key={ProductsData[4].id}

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.staffsPage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.staffsPage .container {
+  width: calc(100vw - 278px);
+  min-height: calc(100vh - 100px);
+  position: absolute;
+  left: 276px;
+  top: 74px;
+  padding: 10px 40px;
+  background-color: #ededed;
+}
+
+.staffsPage .container .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100vw - 360px);
+}
+
+.staffsPage .container .top h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.staffsPage .container .top a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.staffsPage .filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100vw - 700px);
+  height: 40px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.staffsPage .filter i {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d7d7d7;
+  height: 40px;
+}
+
+.staffsPage .filter p {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d7d7d7;
+  height: 40px;
+}
+
+.staffsPage .filter select {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #d7d7d7;
+  height: 40px;
+  cursor: pointer;
+}
+
+.staffsPage .filter select:focus {
+  outline: none;
+}
+
+.staffsPage .filter .reset-filter {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid #d7d7d7;
+  background-color: #ffd3c6;
+  color: #fe4910;
+  cursor: pointer;
+}
+
+.staffsPage .filter .reset-filter i {
+  border: none;
+}
+
+.staffsPage .filter .reset-filter p {
+  border: none;
+}
+
+.staffsPage .title {
+  position: relative;
+  display: flex;
+  width: calc(100vw - 360px);
+  height: 40px;
+  background-color: #c4c4c4;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.staffsPage .title p {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staffsPage .table {
+  height: calc(100vh - 250px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: calc(100vw - 360px);
+}

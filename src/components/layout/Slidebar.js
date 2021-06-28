@@ -7,7 +7,7 @@ const Slidebar = () => {
             <a href="/products"> <img src="/images/product.png" alt="dashboard" className="dashboard" />Products</a>
             <Link to="/accounts"> <img src="/images/account.png" alt="dashboard" className="dashboard" />Accounts</Link>
             <Link to="/promotes"> <img src="/images/promote.png" alt="dashboard" className="dashboard" />Promotes</Link>
-            <Link to="/staffs"> <img src="/images/staff.png" alt="dashboard" className="dashboard" />Staffs</Link>
+            <a href="/staffs"> <img src="/images/staff.png" alt="dashboard" className="dashboard" />Staffs</a>
             <Link to="/orderlist"> <img src="/images/orderlist.png" alt="dashboard" className="dashboard" />Order List</Link>
             <br></br>
             <hr></hr>
