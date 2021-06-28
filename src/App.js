@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavbarCustom/>
       <Slidebar/>
-      <ProfitPage/>
+      {/* <ProfitPage/> */}
       <RouterURL/>
     </div>
     </BrowserRouter>

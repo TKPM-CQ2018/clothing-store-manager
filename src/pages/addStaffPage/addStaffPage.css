@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+p {
+  margin: 0;
+}
+
+.addStaffPage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.addStaffPage .container {
+  width: calc(100vw - 276px);
+  height: calc(100vh - 74px);
+  position: absolute;
+  left: 276px;
+  top: 74px;
+  padding: 0 30px 30px 30px;
+  background-color: #ededed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addStaffPage .container .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.addStaffPage .container .top h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.addStaffPage .container .content {
+  width: calc(100vw - 336px);
+  height: calc(100vh - 124px);
+  flex: 10;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.addStaffPage .container .content .photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addStaffPage .container .content .photo i {
+  width: 70px;
+  height: 70px;
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.addStaffPage .container .content .photo a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.addStaffPage .container .content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.addStaffPage .container .content .vat,
+.addStaffPage .container .content .name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.addStaffPage .vat p,
+.addStaffPage .date-category p,
+.addStaffPage .purchase-price p,
+.addStaffPage .container .content .name p {
+  font-weight: 500;
+  margin: 0;
+  font-size: 14px;
+}
+
+.addStaffPage .container .content .vat input,
+.addStaffPage .container .content .name input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  border: #cccccc;
+}
+
+.addStaffPage .purchase-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.addStaffPage .purchase {
+  flex: 1;
+}
+
+.addStaffPage .purchase input {
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  border: #cccccc;
+}
+
+.addStaffPage .price {
+  flex: 1;
+}
+
+.addStaffPage .price input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  border: #cccccc;
+}
+
+.addStaffPage .date-category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.addStaffPage .date {
+  flex: 1;
+}
+
+.addStaffPage .date input {
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  border: #cccccc;
+}
+
+.addStaffPage .category {
+  flex: 1;
+}
+
+.addStaffPage .category select {
+  width: 100%;
+  height: 40px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  border: #cccccc;
+}
+
+.addStaffPage .category select:focus {
+  outline: none;
+}
+
+.addStaffPage .add-cancel {
+  display: flex;
+  justify-content: center;
+}
+
+.addStaffPage .add-cancel button {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #fff;
+  border: #cccccc;
+  border-radius: 10px;
+}
+
+.addStaffPage .add-cancel button i,
+.addStaffPage .add-cancel button p {
+  margin: 10px;
+}
+
+.addStaffPage .add button {
+  background-color: #1a7fdb;
+}
+
+.addStaffPage .cancel button {
+  background-color: #8f8888;
+}

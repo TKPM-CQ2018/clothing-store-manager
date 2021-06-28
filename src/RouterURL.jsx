@@ -7,6 +7,7 @@ import AddProductPage from "./pages/addProductPage/AddProductPage.jsx";
 import StaffsPage from "./pages/staffsPage/StaffsPage.jsx";
 import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
 import { StaffData } from "./staff-data";
+import AddStaffPage from "./pages/addStaffPage/AddStaffPage";
 
 export default function RouterURL() {
   return (
@@ -19,6 +20,7 @@ export default function RouterURL() {
             <StaffDetailPage key={StaffData[0].id} staff={StaffData[0]} />
           </Route>
           <Route exact path="/products/add" component={AddProductPage} />
+          <Route exact path="/staffs/add" component={AddStaffPage} />
           <Route exact path="/products/001">
             <ProductDetailPage
               key={ProductsData[0].id}
