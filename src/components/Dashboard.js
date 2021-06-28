@@ -78,7 +78,7 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                     <tr className="info-row">
-                        <th className="col-4 product">
+                        <th className="col-4 product_atr">
                             <img src="/images/product-avatar.png" alt="up" className="avatar-product" />
                             <span className="product-name">Áo polo name</span>
                         </th>
@@ -89,7 +89,7 @@ const Dashboard = () => {
                         <th className="col-2 status delivered"><div>Delivered</div></th>
                     </tr>
                     <tr className="info-row">
-                        <th className="col-4 product">
+                        <th className="col-4 product_atr">
                             <img src="/images/product-avatar.png" alt="up" className="avatar-product" />
                             <span className="product-name">Áo polo name</span>
                         </th>

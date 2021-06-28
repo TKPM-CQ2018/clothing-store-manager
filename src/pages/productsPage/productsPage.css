@@ -9,7 +9,7 @@
 
 .products .container {
   width: calc(100vw - 278px);
-  min-height: calc(100vh);
+  min-height: calc(100vh - 100px);
   position: absolute;
   left: 276px;
   top: 74px;
@@ -22,6 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: calc(100vw - 390px);
+
 }
 
 .products .container .top h1 {
@@ -40,6 +42,7 @@
 
 .products .container .filter {
   height: auto;
+  width: calc(100vw - 336px);
 }
 
 .products .container .filter ul {
@@ -138,7 +141,7 @@
   height: 30px;
   background-color: #c4c4c4;
   border-radius: 5px 5px 0 0;
-  width: 98.35%;
+  width: calc(100vw - 401px);
 }
 
 .products .title ul {
@@ -159,6 +162,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 480px;
   overflow-y: scroll;
+  width: calc(100vw - 390px);
+  height: calc(100vh - 206px);
 }

@@ -38,6 +38,8 @@ p {
 }
 
 .addProductPage .container .content {
+  width: calc(100vw - 336px);
+  height: calc(100vh - 124px);
   flex: 10;
   background-color: #fff;
   border-radius: 10px;
@@ -68,6 +70,12 @@ p {
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
+}
+
+.addProductPage .container .content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .addProductPage .container .content .vat,
@@ -171,15 +179,20 @@ p {
 }
 
 .addProductPage .add-cancel button {
-  width: 250px;
-  height: 50px;
+  width: 130px;
+  height: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 10px;
   color: #fff;
   border: #cccccc;
   border-radius: 10px;
+}
+
+.addProductPage .add-cancel button i,
+.addProductPage .add-cancel button p {
+  margin: 10px;
 }
 
 .addProductPage .add button {

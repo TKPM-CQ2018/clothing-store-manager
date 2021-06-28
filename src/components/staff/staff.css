@@ -1,0 +1,23 @@
+.staff {
+  display: flex;
+  position: relative;
+  width: calc(100vw - 360px);
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+  color: #111;
+}
+
+.staff p {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
