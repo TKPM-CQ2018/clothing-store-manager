@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+.profit {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.profit .container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 276px;
+  top: 74px;
+  padding: 10px 40px;
+  background-color: #ededed;
+}
+
+.profit .container .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .products .container .top h1 {
+  font-size: 20px;
+}
+
+.products .container .top a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+} */
+
+.profit .container .filter {
+  height: auto;
+}
+
+.profit .container .filter ul {
+  display: flex;
+  width: fit-content;
+  height: auto;
+  background-color: #ffffff;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.profit .container .filter ul li {
+  list-style: none;
+  height: 75px;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.profit .filter ul .icon-list {
+  display: flex;
+  height: inherit;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  border-right: #d7d7d7 solid 0.1px;
+}
+
+.profit .filter ul .filter-by {
+  border-right: #d7d7d7 solid 0.1px;
+  width: 135px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+
+.profit .filter ul .begin-date {
+  border: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  border-right: #d7d7d7 solid 0.1px;
+  cursor: pointer;
+}
+
+.profit .filter ul .refresh {
+  display: flex;
+  background-color: #ffd3c6;
+  color: #fe4910;
+  width: 151px;
+  border-radius: 0 6px 6px 0;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profit .profit-chart {
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: -20px;
+  padding-top: 5px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.profit .profit-chart h2{
+  margin: 20px;
+}
+/* 
+.products .title {
+  position: relative;
+  margin-top: 10px;
+  height: 30px;
+  background-color: #c4c4c4;
+  border-radius: 5px 5px 0 0;
+  width: 98.35%;
+}
+
+.products .title ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.products .title ul li {
+  list-style: none;
+  font-weight: 700;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  overflow-y: scroll;
+} */
+
+.profit section.arrow-card {
+  display: flex;
+}
+
+.profit section.arrow-card .center {
+  text-align: -webkit-center;
+}
+
+.profit section.arrow-card .card {
+  border-radius: 10px;
+  border: none;
+  margin-left: 25px;
+  width: fit-content;
+  text-align: left;
+}
+
+.profit section.arrow-card .card .card-body {
+  padding-top: 0px;
+  margin-top: -35px;
+}
+
+.profit section.arrow-card .card .card-title {
+  font-weight: 600;
+  opacity: 50%;
+  font-size: 16px;
+}
+
+.profit section.arrow-card .card .card-body .dong {
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.profit section.arrow-card .card img.card-img-top {
+  width: 60px;
+  height: 55px;
+}
+
+
+.profit section.arrow-card .card .card-body .card-text {
+  font-size: 45px;
+  font-weight: 600;
+  width: 230px;
+  margin-top: 20px;
+  height: 45px;
+}
+
+.profit section.arrow-card .card .cardheader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+.profit .table-name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.profit .title {
+  position: relative;
+  margin-top: 10px;
+  height: 30px;
+  background-color: #c4c4c4;
+  border-radius: 5px 5px 0 0;
+  width: 98.35%;
+}
+
+.profit .title ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.profit .title ul li {
+  list-style: none;
+  font-weight: 700;
+  align-items: center;
+}
+
+.profit .table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+/* .profit .product .id {
+  display: flex;
+  flex: 0;
+  margin-left: 25px;
+}
+
+.profit .product .name {
+  flex: 1 1;
+  display: flex;
+  justify-content: left;
+  margin-left: 40px;
+}
+
+.profit .product .total-revenue {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+} */
+
+.profit .id {
+  width: 15%;
+  padding: 0;
+}
+
+.profit .name {
+  width: 55%;
+  padding-left: 0.5rem;
+}
+
+.profit .total-revenue {
+  padding-left: 8px;
+}
+
+.profit .table-element {
+  display: flex;
+  align-items: center;
+  height: auto;
+  background-color: #fff;
+  font-weight: 500;
+  margin: 2px 0;
+  padding-left: 2rem;
+  list-style: none;
+}
+
+.profit .table-element .link {
+  display: initial;
+  text-align: left;
+}
+
+.profit .margin-top {
+  margin-top: 2rem;
+}
+
+.profit .margin-right {
+  margin-right: 1rem;
+}
+
+.profit .margin-left {
+  margin-left: 1rem;
+}

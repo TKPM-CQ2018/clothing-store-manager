@@ -9,7 +9,7 @@ export const StaffData = [
     salary: "10.000.000",
   },
   {
-    id: "001",
+    id: "002",
     name: "Hà Minh Cường",
     adress: "Dormitory, VNU",
     position: "CEO",
