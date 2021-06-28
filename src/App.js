@@ -2,18 +2,17 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import NavbarCustom from './components/layout/Navbar';
 import Slidebar from './components/layout/Slidebar';
-<<<<<<< .mine
-
-=======
 import RouterURL from './RouterURL'
->>>>>>> .theirs
+import AddProductPage from "./pages/addProductPage/AddProductPage";
+import SignIn from "./components/auth/SignIn";
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <NavbarCustom/>
-      <Slidebar/>
-		<Dashboard/>
+      {/* <NavbarCustom/>
+      <Slidebar/> */}
+		{/* <Dashboard/> */}
+      <SignIn></SignIn>
       <RouterURL/>
     </div>
     </BrowserRouter>
