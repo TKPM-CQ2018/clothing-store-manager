@@ -1,16 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { BrowserRouter , Route, Switch } from "react-router-dom";
 import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import AddProductPage from "./pages/addProductPage/AddProductPage.jsx";
 import StaffsPage from "./pages/staffsPage/StaffsPage.jsx";
 import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
 import AddStaffPage from "./pages/addStaffPage/AddStaffPage";
+import SignIn from "./components/auth/SignIn";
+import Dashboard from "./components/Dashboard";
 
 export default function RouterURL() {
   return (
     <div className="router-url">
-      <Router>
+      <Switch>
         <div>
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/staffs" component={StaffsPage} />
@@ -21,7 +24,7 @@ export default function RouterURL() {
             <ProductDetailPage />
           </Route>
         </div>
-      </Router>
+      </Switch>
     </div>
   );
 }

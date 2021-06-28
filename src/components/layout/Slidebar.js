@@ -12,13 +12,13 @@ const Slidebar = () => {
             <br></br>
             <hr></hr>
             <div className="title-field-sidebar">Statistics</div>
-            <Link to="/access"> <img src="/images/access.png" alt="dashboard" className="dashboard" />Access</Link>
-            <Link to="/revenue"> <img src="/images/revenue.png" alt="dashboard" className="dashboard" />Revenue</Link>
-            <Link to="/profit"> <img src="/images/profit.png" alt="dashboard" className="dashboard" />Profit</Link>
+            <Link to="/access"> <img src="/images/access.png" alt="dashboard" className="access" />Access</Link>
+            <Link to="/revenue"> <img src="/images/revenue.png" alt="dashboard" className="revenue" />Revenue</Link>
+            <Link to="/profit"> <img src="/images/profit.png" alt="dashboard" className="profit" />Profit</Link>
             <br></br>
             <hr></hr>
             <div className="title-field-sidebar">System</div>
-            <Link to="/settings"> <img src="/images/settings.png" alt="dashboard" className="dashboard" />Setting</Link>
+            <Link to="/settings"> <img src="/images/settings.png" alt="dashboard" className="setting" />Setting</Link>
             <Link to="/"> <img src="/images/logout.png" alt="dashboard" className="dashboard" />Log Out</Link>
         </section>
     );

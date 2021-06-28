@@ -91,3 +91,11 @@ export default function ProductsPage() {
     </div>
   );
 }
+
+const mapStateToProps =(state)=>{
+ const products=state.products;
+  return{
+    products: products,
+  }
+}
+export default connect(mapStateToProps)(ProductsPage);

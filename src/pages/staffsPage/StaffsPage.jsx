@@ -1,9 +1,9 @@
 import React from "react";
 import "./staffsPage.css";
-import { StaffData } from "../../staff-data";
 import Staff from "../../components/staff/Staff";
-
-export default function StaffsPage() {
+import { connect } from "react-redux";
+const StaffsPage = (props) =>{
+  const {staffs}=props;
   return (
     <div className="staffsPage">
       <div className="container">
@@ -50,7 +50,7 @@ export default function StaffsPage() {
         </div>
 
         <div className="table">
-            {StaffData.map(staff=> (
+            {staffs.map(staff=> (
                 <Staff staff={staff}/>
             ))}
         </div>
@@ -58,3 +58,9 @@ export default function StaffsPage() {
     </div>
   );
 }
+const mapStateToProps =(state)=>{
+  return{
+    staffs: state.staffs,
+  }
+}
+export default connect(mapStateToProps) (StaffsPage);

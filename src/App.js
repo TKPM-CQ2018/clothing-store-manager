@@ -9,9 +9,10 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
+
       <NavbarCustom/>
       <Slidebar/>
-      {/* <ProfitPage/> */}
+
       <RouterURL/>
     </div>
     </BrowserRouter>
