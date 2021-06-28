@@ -1,9 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./productsPage.css";
 import Product from "../../components/product/Product";
-import { ProductsData } from "../../product-data.js";
 
-export default function ProductsPage() {
+const  ProductsPage=(props)=> {
+  const {products} =props;
   const ResetFilter = function () {
     const typeElement = document.getElementById("type");
     const statusElement = document.getElementById("status");
@@ -70,11 +71,21 @@ export default function ProductsPage() {
         </div>
 
         <div className="table">
-          {ProductsData.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
+          { products && products.map((product) => 
+            (
+              <Product key={product.id} product={product} />
+            )
+          )}
         </div>
       </div>
     </div>
   );
 }
+
+const mapStateToProps =(state)=>{
+ const products=state.products;
+  return{
+    products: products,
+  }
+}
+export default connect(mapStateToProps)(ProductsPage);

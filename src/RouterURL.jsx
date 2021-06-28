@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter , Route, Switch } from "react-router-dom";
 import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import { ProductsData } from "./product-data";
@@ -7,25 +7,28 @@ import AddProductPage from "./pages/addProductPage/AddProductPage.jsx";
 import StaffsPage from "./pages/staffsPage/StaffsPage.jsx";
 import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
 import { StaffData } from "./staff-data";
+import SignIn from "./components/auth/SignIn";
+import Dashboard from "./components/Dashboard";
 
 export default function RouterURL() {
   return (
     <div className="router-url">
-      <Router>
+      <Switch>
         <div>
-          <Route exact path="/products" component={ProductsPage} />
-          <Route exact path="/staffs" component={StaffsPage} />
-          <Route exact path="/staffs/001">
+          <Route exact path="/" component={Dashboard}/>
+          <Route  path="/products" component={ProductsPage} />
+          <Route  path="/staffs" component={StaffsPage} />
+          <Route  path="/staffs/001">
             <StaffDetailPage key={StaffData[0].id} staff={StaffData[0]} />
           </Route>
-          <Route exact path="/products/add" component={AddProductPage} />
-          <Route exact path="/products/001">
+          <Route  path="/products/add" component={AddProductPage} />
+          <Route  path="/products/001">
             <ProductDetailPage
               key={ProductsData[0].id}
               product={ProductsData[0]}
             />
           </Route>
-          <Route exact path="/products/002">
+          <Route  path="/products/002">
             <ProductDetailPage
               key={ProductsData[1].id}
               product={ProductsData[1]}
@@ -50,7 +53,7 @@ export default function RouterURL() {
             />
           </Route>
         </div>
-      </Router>
+      </Switch>
     </div>
   );
 }

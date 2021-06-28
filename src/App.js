@@ -11,10 +11,8 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      {/* <NavbarCustom/>
-      <Slidebar/> */}
-		{/* <Dashboard/> */}
-      <SignIn></SignIn>
+      <NavbarCustom/>
+      <Slidebar/>
       <RouterURL/>
     </div>
     </BrowserRouter>
