@@ -7,53 +7,21 @@ import StaffsPage from "./pages/staffsPage/StaffsPage.jsx";
 import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
 import AddStaffPage from "./pages/addStaffPage/AddStaffPage";
 
-export default class RouterURL extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      StaffsData: [],
-      ProductsData: [],
-    };
-  }
+export default function RouterURL() {
+  return (
+    <div className="router-url">
+      <Router>
+        <div>
+          <Route exact path="/products" component={ProductsPage} />
+          <Route exact path="/staffs" component={StaffsPage} />
+          <Route exact path="/products/add" component={AddProductPage} />
+          <Route exact path="/staffs/add" component={AddStaffPage} />
 
-  callAPI() {
-    fetch("http://localhost:9000/staffDataAPI")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ StaffsData: data });
-      });
-  }
-
-  callAPI2() {
-    fetch("http://localhost:9000/productDataAPI")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ ProductsData: data });
-      });
-  }
-
-  componentWillMount() {
-    this.callAPI();
-    this.callAPI2();
-  }
-
-  render() {
-    //console.log("LOZ");
-    return (
-      <div className="router-url">
-        <Router>
-          <div>
-            <Route exact path="/products" component={ProductsPage} />
-            <Route exact path="/staffs" component={StaffsPage} />
-            <Route exact path="/products/add" component={AddProductPage} />
-            <Route exact path="/staffs/add" component={AddStaffPage} />
-
-            <Route exact path="/products/:id">
-              <ProductDetailPage />
-            </Route>
-          </div>
-        </Router>
-      </div>
-    );
-  }
+          <Route exact path="/products/:id">
+            <ProductDetailPage />
+          </Route>
+        </div>
+      </Router>
+    </div>
+  );
 }
