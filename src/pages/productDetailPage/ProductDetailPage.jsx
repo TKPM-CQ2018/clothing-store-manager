@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./productDetailPage.css";
 import { useParams } from "react-router-dom";
-import { ProductsData } from "../../product-data";
+//import { ProductsData } from "../../product-data";
+import { getList } from "../../product-data";
 
 export default function ProductDetailPage() {
-  let { id } = useParams();
-  let index = 0;
-  for (let i = 0; i < ProductsData.length; i++) {
-    if (ProductsData[i].id === id) {
-      index = i;
-      break;
-    }
-  }
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getList().then((items) => {
+      if (mounted) {
+        setList(items);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+
+  // let { id } = useParams();
+  // let index = 0;
+  // for (let i = 0; i < list.length; i++) {
+  //   if (list[i].id === id) {
+  //     index = i;
+  //     break;
+  //   }
+  // }
+
   return (
     <div className="product-detail-page">
       <div className="container">
@@ -21,7 +35,9 @@ export default function ProductDetailPage() {
         <div className="content">
           <div className="left">
             <div className="img-container">
-              <img src={ProductsData[index].image} alt="" />
+              {list.map((item) => (
+                <img src={item.image} alt="" />
+              ))}
             </div>
 
             <div className="two-button">
@@ -38,26 +54,39 @@ export default function ProductDetailPage() {
 
           <div className="right">
             <p className="title name">
-              Name: <span>{ProductsData[index].name}</span>
+              Name:
+              {list.map((item) => (
+                <span>{item.name}</span>
+              ))}
             </p>
 
             <p className="title category">
-              Category: <span>{ProductsData[index].category}</span>
+              Category:
+              {list.map((item) => (
+                <span>{item.category}</span>
+              ))}
             </p>
 
             <p className="title price">
               Price:{" "}
-              <span>
-                {ProductsData[index].price} <span>VND</span>
-              </span>
+              {list.map((item) => (
+                <span>
+                  {item.price} <span>VND</span>
+                </span>
+              ))}
             </p>
 
             <p className="title amount">
-              Amount: <span>{ProductsData[index].amount}</span>
+              Amount:
+              {list.map((item) => (
+                <span>{item.amount}</span>
+              ))}
             </p>
 
             <p className="title description">Description:</p>
-            <p>{ProductsData[index].des}</p>
+            {list.map((item) => (
+              <p>{item.des}</p>
+            ))}
           </div>
         </div>
       </div>

@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./productsPage.css";
 import Product from "../../components/product/Product";
-import { ProductsData } from "../../product-data.js";
+//import { ProductsData } from "../../product-data.js";
+import { getList } from "../../product-data";
 
 export default function ProductsPage() {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getList().then((items) => {
+      if (mounted) {
+        setList(items);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+
   const ResetFilter = function () {
     const typeElement = document.getElementById("type");
     const statusElement = document.getElementById("status");
@@ -70,7 +83,7 @@ export default function ProductsPage() {
         </div>
 
         <div className="table">
-          {ProductsData.map((product) => (
+          {list.map((product) => (
             <Product key={product.id} product={product} />
           ))}
         </div>
