@@ -7,7 +7,7 @@ export default function Staff({ staff }) {
       <p>{staff.id}</p>
 
       <p>
-        <a href="/staffs/001">{staff.name}</a>
+        <a href={`/staffs/${staff.id}`}>{staff.name}</a>
       </p>
       <p>{staff.adress}</p>
       <p>{staff.position}</p>

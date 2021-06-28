@@ -1,7 +1,17 @@
 import React from "react";
 import "./productDetailPage.css";
+import { useParams } from "react-router-dom";
+import { ProductsData } from "../../product-data";
 
-export default function ProductDetailPage({ product }) {
+export default function ProductDetailPage() {
+  let { id } = useParams();
+  let index = 0;
+  for (let i = 0; i < ProductsData.length; i++) {
+    if (ProductsData[i].id === id) {
+      index = i;
+      break;
+    }
+  }
   return (
     <div className="product-detail-page">
       <div className="container">
@@ -11,7 +21,7 @@ export default function ProductDetailPage({ product }) {
         <div className="content">
           <div className="left">
             <div className="img-container">
-              <img src={product.image} alt="" />
+              <img src={ProductsData[index].image} alt="" />
             </div>
 
             <div className="two-button">
@@ -28,26 +38,26 @@ export default function ProductDetailPage({ product }) {
 
           <div className="right">
             <p className="title name">
-              Name: <span>{product.name}</span>
+              Name: <span>{ProductsData[index].name}</span>
             </p>
 
             <p className="title category">
-              Category: <span>{product.category}</span>
+              Category: <span>{ProductsData[index].category}</span>
             </p>
 
             <p className="title price">
               Price:{" "}
               <span>
-                {product.price} <span>VND</span>
+                {ProductsData[index].price} <span>VND</span>
               </span>
             </p>
 
             <p className="title amount">
-              Amount: <span>{product.amount}</span>
+              Amount: <span>{ProductsData[index].amount}</span>
             </p>
 
             <p className="title description">Description:</p>
-            <p>{product.des}</p>
+            <p>{ProductsData[index].des}</p>
           </div>
         </div>
       </div>

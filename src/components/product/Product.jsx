@@ -22,9 +22,12 @@ export default function Product({ product }) {
   return (
     <div className="product">
       <div className="id">{product.id}</div>
-      <a className="link" href={`/products/${product.id}`}>
-        <div className="name">{product.name}</div>
-      </a>
+
+      <div className="name">
+        <a className="link" href={`/products/${product.id}`}>
+          {product.name}
+        </a>
+      </div>
 
       <div className="category">{product.category}</div>
       <div className="picture">
