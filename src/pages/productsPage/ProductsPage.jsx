@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./productsPage.css";
 import Product from "../../components/product/Product";
-//import { ProductsData } from "../../product-data.js";
 import { getList } from "../../product-data";
 import { connect } from "react-redux";
 
-const ProductsPage = () =>{
+const ProductsPage = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -91,12 +90,12 @@ const ProductsPage = () =>{
       </div>
     </div>
   );
-}
+};
 
-const mapStateToProps =(state)=>{
- const products=state.products;
-  return{
+const mapStateToProps = (state) => {
+  const products = state.products;
+  return {
     products: products,
-  }
-}
+  };
+};
 export default connect(mapStateToProps)(ProductsPage);
