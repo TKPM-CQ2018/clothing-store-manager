@@ -10,6 +10,9 @@ import AddStaffPage from "./pages/addStaffPage/AddStaffPage";
 import SignIn from "./components/auth/SignIn";
 import Dashboard from "./components/Dashboard";
 import ProfitPage from "./pages/profit/profitPage";
+import TopProductsPage from "./pages/profit/topProductsPage";
+import TopSalersPage from "./pages/profit/topSalersPage";
+
 
 export default function RouterURL() {
   return (
@@ -26,6 +29,8 @@ export default function RouterURL() {
             <ProductDetailPage />
           </Route>
           <Route exact path="/profits" component={ProfitPage}/>
+          <Route exact path="/profits/top-products" component={TopProductsPage}/>
+          <Route exact path="/profits/top-salers" component={TopSalersPage}/>
         </div>
       </Switch>
     </div>

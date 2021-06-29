@@ -214,7 +214,7 @@
   height: 30px;
   background-color: #c4c4c4;
   border-radius: 5px 5px 0 0;
-  width: 98.35%;
+  width: 100%;
 }
 
 .profit .title ul {
@@ -233,7 +233,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-right: 10px;
 }
 
 /* .profit .product .id {
@@ -286,7 +285,7 @@
 }
 
 .profit .margin-top {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .profit .margin-right {
@@ -296,3 +295,19 @@
 .profit .margin-left {
   margin-left: 1rem;
 }
+
+.profit .id-detail {
+  width: 7%;
+}
+
+.profit .name-detail {
+  width: 20%;
+  padding: 0.5rem;
+}
+
+.profit .revenue-detail {
+  width: 15%;
+  text-align: center;
+  padding: 0.5rem;
+}
+

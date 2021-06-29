@@ -4,6 +4,10 @@ import NavbarCustom from './components/layout/Navbar';
 import Slidebar from './components/layout/Slidebar';
 import ProfitPage from './pages/profit/profitPage';
 import RouterURL from './RouterURL'
+import StaffsPage from "./pages/staffsPage/StaffsPage";
+import ProductsPage from "./pages/productsPage/ProductsPage";
+
+
 
 function App() {
   return (
@@ -12,7 +16,6 @@ function App() {
 
       <NavbarCustom/>
       <Slidebar/>
-
       <RouterURL/>
     </div>
     </BrowserRouter>

@@ -46,7 +46,7 @@ export default function ProfitPage() {
           <ProfitCP.ProfitChart></ProfitCP.ProfitChart>
         </div>
 
-        <section className="arrow-card row">
+        <section className="arrow-card row margin-top">
           <div className="col-4 center">
             <div className="card">
               <div className="cardheader">
