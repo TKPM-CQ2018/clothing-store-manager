@@ -17,7 +17,8 @@ create table KhachHang(
     DiaChi nvarchar(50) not null,
     GioiTinh int not null,
     TrangThai int,
-    MaNguoiDung varchar(10)
+    TenDangNhap varchar(50) unique,
+    MatKhau varchar(50)
 );
 
 create table NhanVien(
@@ -28,8 +29,9 @@ create table NhanVien(
     PhuCap int ,
     NgayBatDauLam date,
     TrangThai int,
-	MaNguoiDung varchar(10),
-    GioiTinh int not null
+    GioiTinh int not null,
+    TenDangNhap varchar(50) unique,
+    MatKhau varchar(50)
 );
 
 create table LoaiNhanVien(
@@ -192,22 +194,18 @@ create table ChiTietLuong(
     SoLanBonus  int not null ,
     LuongCoBan float not null
 );
+alter table NhanVien add foreign key (MaloaiNV) references LoaiNhanVien(MaLoaiNV);
 
-alter table KhachHang add foreign key (MaNguoiDung) references NguoiDung(MaNguoiDung);
-
-alter table nhanvien add foreign key (MaNguoiDung) references NguoiDung(MaNguoiDung);
-alter table nhanvien add foreign key (MaloaiNV) references loainhanvien(maloaiNV);
-
-alter table TruongBoPhan add foreign key (MaTruongBoPhan) references nhanvien(MaloaiNV);
+alter table TruongBoPhan add foreign key (MaTruongBoPhan) references NhanVien(MaloaiNV);
 
 alter table HoaDon add foreign key (MaKhachHang) references khachHang(MaKhachHang);
-alter table HoaDon add foreign key (MaKhuyenMai) references khuyenmai(MaKhuyenMai);
-alter table HoaDon add foreign key (NguoiTao) references nhanvien(MaNhanVien);
+alter table HoaDon add foreign key (MaKhuyenMai) references KhuyenMai(MaKhuyenMai);
+alter table HoaDon add foreign key (NguoiTao) references NhanVien(MaNhanVien);
 
 alter table ChiTietHoaDon add foreign key (MaSP) references SanPham(MaSanPham);
 alter table ChiTietHoaDon add foreign key (MaHTTT) references HinhThucThanhToan(MaHTTT);
 
-alter table PhieuDatHang add foreign key (MaKH ) references khachHang(MaKhachHang);
+alter table PhieuDatHang add foreign key (MaKH ) references KhachHang(MaKhachHang);
 
 alter table ChiTietDatHang add foreign key (MaSP) references SanPham(MaSanPham);
 
@@ -216,7 +214,7 @@ alter table SanPham add foreign key (MaLoaiSP) references LoaiSanPham(MaLoaiSP);
 
 alter table KhuyenMai add foreign key (MaLoaiKM) references LoaiKhuyenMai(MaLoaiKM);
 
-alter table Kho add foreign key (MaNVQuanLy) references nhanvien(MaNhanVien);
+alter table Kho add foreign key (MaNVQuanLy) references NhanVien(MaNhanVien);
 
 alter table PhieuXuatKho add foreign key (MaKho) references Kho(MaKho);
 alter table PhieuXuatKho add foreign key (MaKhoXuat) references Kho(MaKho);
@@ -230,7 +228,7 @@ alter table ChiTietNhapKho add foreign key (MaSP) references SanPham(MaSanPham);
 
 alter table ChiTietKho add foreign key (MaSP) references SanPham(MaSanPham);
 
-alter table Luong add foreign key (MaNV) references nhanvien(MaNhanVien);
+alter table Luong add foreign key (MaNV) references NhanVien(MaNhanVien);
 
 
 INSERT INTO HinhThucThanhToan
@@ -300,11 +298,11 @@ VALUES ('9','2021-06-27', 'tendangnhap9', 'matkhau' );
 
 
 INSERT INTO KhachHang 
-VALUES ('1','Trần Tân Phước',null, '0000000000',  'tendangnhap1@gmail.com', 'Tiền Giang', 1,1, '1' );
+VALUES ('1','Trần Tân Phước',null, '0000000000',  'tendangnhap1@gmail.com', 'Tiền Giang', 1,1, 'khachhang1', 'password' );
 INSERT INTO KhachHang 
-VALUES ('2','Đặng Quốc Trường',null, '1111111111',  'tendangnhap2@gmail.com', 'Tiền Giang', 1,1, '2' );
+VALUES ('2','Đặng Quốc Trường',null, '1111111111',  'tendangnhap2@gmail.com', 'Tiền Giang', 1,1, 'khachhang2', 'password' );
 INSERT INTO KhachHang 
-VALUES ('3','Đặng Ðình Tuấn',null, '2222222222',  'tendangnhap3@gmail.com', 'Tiền Giang', 1,1, '3' );
+VALUES ('3','Đặng Ðình Tuấn',null, '2222222222',  'tendangnhap3@gmail.com', 'Tiền Giang', 1,1, '3', 'khachhangpassword' );
 
 
 INSERT INTO LoaiNhanVien
@@ -329,17 +327,17 @@ VALUES ('4','Kế toán và Kho', 'Bao gồm nhân viên kế toán',  '2021-06-
 
 
 INSERT INTO NhanVien 
-VALUES ('1','Lý Quang Huy','1',null,null,  '2021-06-27', 1, '4',1 );
+VALUES ('1','Lý Quang Huy','1',null,null,  '2021-06-27', 1, 1, 'nhanvien1', 'password' );
 INSERT INTO NhanVien 
-VALUES ('2','Nguyễn Xuân Trung','2',null,null,  '2021-06-27', 1, '5',1 );
+VALUES ('2','Nguyễn Xuân Trung','2',null,null,  '2021-06-27', 1, 1,'nhanvien2', 'password'  );
 INSERT INTO NhanVien 
-VALUES ('3','Ngô Tuyết Nhung','3',null,null,  '2021-06-27', 1, '6',0 );
+VALUES ('3','Ngô Tuyết Nhung','3',null,null,  '2021-06-27', 1, 0 ,'nhanvien3', 'password' );
 INSERT INTO NhanVien 
-VALUES ('4','Đặng Phi Long','4',null,null,  '2021-06-27', 1, '7',0 );
+VALUES ('4','Đặng Phi Long','4',null,null,  '2021-06-27', 1, 0, 'nhanvien4', 'password'  );
 INSERT INTO NhanVien 
-VALUES ('5','Lê Tuấn Linh','5',null,null,  '2021-06-27', 1, '8',1 );
+VALUES ('5','Lê Tuấn Linh','5',null,null,  '2021-06-27', 1, 1 , 'nhanvien5', 'password' );
 INSERT INTO NhanVien 
-VALUES ('6','Nguyễn Huy Tú','5',null,null,  '2021-06-27', 1, '9',1 );
+VALUES ('6','Nguyễn Huy Tú','5',null,null,  '2021-06-27', 1,1,'nhanvien6', 'password'  );
 
 
 INSERT INTO SanPham 
