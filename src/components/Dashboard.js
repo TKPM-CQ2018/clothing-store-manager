@@ -1,4 +1,5 @@
 import React from "react";
+import { ProfitChart } from "./profit/profit";
 const Dashboard = () => {
     return ( 
     <section className="dashboard">
@@ -63,6 +64,13 @@ const Dashboard = () => {
             
 
         </section>
+        <section className="quick-chart-report">
+        <div className='profit-chart'>
+          <h2 className="title-chart">Profit report</h2>
+          <ProfitChart></ProfitChart>
+        </div>
+        </section>
+        
         <section className="sale-list card">
             <div className="title">Sales Detail</div>
             <table class="table table-striped table-hover ">

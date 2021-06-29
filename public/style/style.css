@@ -489,3 +489,30 @@ section.login .content .container .row .col-6 form .mb-3.button button {
 section.login .content .container .row .col-6 .underline span hr {
     margin-right: 0px !important;
 }
+
+
+/* Quick chart report */
+
+section.quick-chart-report .profit-chart {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: -20px;
+    padding-top: 5px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+section.quick-chart-report .profit-chart {
+    padding: 20px;
+}
+
+section.quick-chart-report .profit-chart .recharts-wrapper {
+    margin: auto;
+}
+
+section.quick-chart-report .profit-chart .title-chart {
+    font-weight: 600;
+    opacity: 50%;
+    margin-bottom: 50px;
+}

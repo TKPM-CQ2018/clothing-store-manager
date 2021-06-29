@@ -9,12 +9,14 @@ import StaffDetailPage from "./pages/staffDetailPage/StaffDetailPage.jsx";
 import AddStaffPage from "./pages/addStaffPage/AddStaffPage";
 import SignIn from "./components/auth/SignIn";
 import Dashboard from "./components/Dashboard";
+import ProfitPage from "./pages/profit/profitPage";
 
 export default function RouterURL() {
   return (
     <div className="router-url">
       <Switch>
         <div>
+          <Route exact path="/" component={Dashboard}/>
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/staffs" component={StaffsPage} />
           <Route exact path="/products/add" component={AddProductPage} />
@@ -23,6 +25,7 @@ export default function RouterURL() {
           <Route exact path="/products/:id">
             <ProductDetailPage />
           </Route>
+          <Route exact path="/profits" component={ProfitPage}/>
         </div>
       </Switch>
     </div>

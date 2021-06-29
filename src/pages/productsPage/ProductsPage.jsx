@@ -3,8 +3,9 @@ import "./productsPage.css";
 import Product from "../../components/product/Product";
 //import { ProductsData } from "../../product-data.js";
 import { getList } from "../../product-data";
+import { connect } from "react-redux";
 
-export default function ProductsPage() {
+const ProductsPage = () =>{
   const [list, setList] = useState([]);
 
   useEffect(() => {
