@@ -1,3 +1,5 @@
 export function getList() {
-  return fetch("http://localhost:9000/testAPI").then((data) => data.json());
+  return fetch("http://localhost:9000/staffDataAPI").then((data) =>
+    data.json()
+  );
 }
