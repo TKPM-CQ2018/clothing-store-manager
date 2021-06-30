@@ -6,20 +6,24 @@ import ProfitPage from './pages/profit/profitPage';
 import RouterURL from './RouterURL'
 import StaffsPage from "./pages/staffsPage/StaffsPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
+import SignIn from "./components/auth/SignIn";
+import { connect } from "react-redux";
 
-
-
-function App() {
+function App(props) {
+  const {logined} = props;
+  const link = logined?<RouterURL/>:<SignIn/>;
   return (
     <BrowserRouter>
     <div className="App">
-
-      <NavbarCustom/>
-      <Slidebar/>
-      <RouterURL/>
+      {link}
     </div>
     </BrowserRouter>
   );
 }
+const mapStateToProps = (state)=>{
+  return{
+    logined: state.auth.logined
+  }
+}
 
-export default App;
+export default connect(mapStateToProps) (App);

@@ -1,5 +1,7 @@
 import React,{ Component } from "react";
-
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { signIn } from "../../actions/authAction";
 export class SignIn extends Component {
   state = {
     username: "",
@@ -14,9 +16,12 @@ export class SignIn extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
+    this.props.signIn(this.state);
   };
-
+  
   render() {
+    const {authError,logined} = this.props;
+    if(logined) return <Redirect to="/"/>
       return(
           <section className="login">
             <div  id="background_login">
@@ -42,7 +47,10 @@ export class SignIn extends Component {
                                         <input type="password" className="form-control" id="password"  onChange={this.handleChange}/>
                                     </div>
                                     <div className="mb-3 button">
-                                    <button className="btn-login" type="submit">Login</button>
+                                      <button className="btn-login" type="submit">Login</button>
+                                        <div className="login-failed">
+                                          {authError ? <p>{authError}</p> : null}
+                                        </div>
                                     </div>
                             </form>
                             
@@ -56,4 +64,16 @@ export class SignIn extends Component {
       );
   }
 }
-export default SignIn;
+const mapStateToProps=(state)=>{
+  return{
+    authError: state.auth.authError,
+    logined: state.auth.logined
+  }
+};
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    signIn: (creds)=>dispatch(signIn(creds))
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps) (SignIn);
