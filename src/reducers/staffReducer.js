@@ -1,7 +1,7 @@
-import { StaffData } from "../staff-data";
+import { getList } from "../staff-data";
 
-const staffReducer = (state = StaffData, action) => {
-    return state;
-}
+const staffReducer = (state = getList(), action) => {
+  return state;
+};
 
 export default staffReducer;
