@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./staffDetailPage.css";
-export default function StaffDetailPage({ staff }) {
+import { useParams } from "react-router-dom";
+import { getList } from "../../staff-data";
+
+export default function StaffDetailPage() {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getList().then((items) => {
+      if (mounted) {
+        setList(items);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+
+  let { id } = useParams();
+  let _index = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].id === id) {
+      _index = i;
+      break;
+    }
+  }
   return (
     <div className="staffDetailPage">
       <div className="container">
@@ -14,32 +37,60 @@ export default function StaffDetailPage({ staff }) {
               <img src="/images/avt_hmc.jpg" alt="" />
               <div className="chu">
                 <p>
-                  Name: <span>{staff.name}</span>
+                  Name:
+                  {list
+                    .filter((element, index) => {
+                      return index === _index;
+                    })
+                    .map((item) => (
+                      <span>{item.name}</span>
+                    ))}
                 </p>
                 <p>
-                  Department: <span>{staff.department}</span>
+                  Department:
+                  {list
+                    .filter((element, index) => {
+                      return index === _index;
+                    })
+                    .map((item) => (
+                      <span>{item.department}</span>
+                    ))}
                 </p>
                 <p>
-                  Phone: <span>{staff.telephone}</span>
+                  Phone:
+                  {list
+                    .filter((element, index) => {
+                      return index === _index;
+                    })
+                    .map((item) => (
+                      <span>{item.telephone}</span>
+                    ))}
                 </p>
                 <p>
-                  Adress: <span>{staff.adress}</span>
+                  Adress:
+                  {list
+                    .filter((element, index) => {
+                      return index === _index;
+                    })
+                    .map((item) => (
+                      <span>{item.adress}</span>
+                    ))}
                 </p>
               </div>
             </div>
             <div className="right">
-              <p>
-                Position: <span>{staff.position}</span>
-              </p>
+              {/* <p>
+                Position: <span>{StaffData[_index].position}</span>
+              </p> */}
               <p>
                 DoB: <span>09/05/2000</span>
               </p>
-              <p>
+              {/* <p>
                 <i className="fa fa-birthday-cake" aria-hidden="true"></i>
               </p>
               <p>
                 <i className="fa fa-birthday-cake" aria-hidden="true"></i>
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="salary">

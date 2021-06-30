@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./staffsPage.css";
 import Staff from "../../components/staff/Staff";
+import { getList } from "../../staff-data";
 import { connect } from "react-redux";
-const StaffsPage = (props) =>{
-  const {staffs}=props;
+
+const StaffsPage = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getList().then((items) => {
+      if (mounted) {
+        setList(items);
+      }
+    });
+    return () => (mounted = false);
+  }, []);
+
+  const ResetFilter = function () {
+    const typeElement = document.getElementById("type");
+    const statusElement = document.getElementById("status");
+
+    for (var element of document.querySelectorAll("option")) {
+      element.removeAttribute("selected");
+    }
+
+    typeElement.setAttribute("selected", "");
+    statusElement.setAttribute("selected", "");
+  };
+
   return (
     <div className="staffsPage">
       <div className="container">
@@ -33,7 +58,7 @@ const StaffsPage = (props) =>{
             <option value="Employee">Employee</option>
           </select>
 
-          <div className="reset-filter">
+          <div className="reset-filter" onClick={() => ResetFilter()}>
             <i className="fa fa-refresh" aria-hidden="true"></i>
             <p>Reset Filter</p>
           </div>
@@ -50,17 +75,18 @@ const StaffsPage = (props) =>{
         </div>
 
         <div className="table">
-            {staffs.map(staff=> (
-                <Staff staff={staff}/>
-            ))}
+          {list.map((staff) => (
+            <Staff key={staff.id} staff={staff} />
+          ))}
         </div>
       </div>
     </div>
   );
-}
-const mapStateToProps =(state)=>{
-  return{
-    staffs: state.staffs,
-  }
-}
-export default connect(mapStateToProps) (StaffsPage);
+};
+const mapStateToProps = (state) => {
+  const staffs = state.staffs;
+  return {
+    staffs: staffs,
+  };
+};
+export default connect(mapStateToProps)(StaffsPage);

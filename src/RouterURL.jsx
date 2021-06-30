@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter , Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ProductDetailPage from "./pages/productDetailPage/ProductDetailPage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import AddProductPage from "./pages/addProductPage/AddProductPage.jsx";
@@ -15,6 +15,7 @@ import TopSalersPage from "./pages/profit/topSalersPage";
 import NavbarCustom from "./components/layout/Navbar";
 import Slidebar from "./components/layout/Slidebar";
 
+
 export default function RouterURL() {
   return (
     <div className="router-url">
@@ -22,7 +23,7 @@ export default function RouterURL() {
       <Slidebar/>
       <Switch>
         <div>
-          <Route exact path="/" component={Dashboard}/>
+          <Route exact path="/" component={Dashboard} />
           <Route exact path="/products" component={ProductsPage} />
           <Route exact path="/staffs" component={StaffsPage} />
           <Route exact path="/products/add" component={AddProductPage} />
@@ -31,9 +32,18 @@ export default function RouterURL() {
           <Route exact path="/products/:id">
             <ProductDetailPage />
           </Route>
-          <Route exact path="/profits" component={ProfitPage}/>
-          <Route exact path="/profits/top-products" component={TopProductsPage}/>
-          <Route exact path="/profits/top-salers" component={TopSalersPage}/>
+
+          <Route exact path="/staffs/:id">
+            <StaffDetailPage />
+          </Route>
+
+          <Route exact path="/profits" component={ProfitPage} />
+          <Route
+            exact
+            path="/profits/top-products"
+            component={TopProductsPage}
+          />
+          <Route exact path="/profits/top-salers" component={TopSalersPage} />
         </div>
       </Switch>
     </div>
