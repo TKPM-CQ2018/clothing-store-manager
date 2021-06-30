@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./staffDetailPage.css";
-export default function StaffDetailPage({ staff }) {
+import { useParams } from "react-router-dom";
+import { StaffData } from "../../staff-data.js";
+
+export default function StaffDetailPage() {
+
+  let { id } = useParams();
+  let _index = 0;
+  for (let i = 0; i < StaffData.length; i++) {
+    if (StaffData[i].id === id) {
+      _index = i;
+      break;
+    }
+  }
   return (
     <div className="staffDetailPage">
       <div className="container">
@@ -14,22 +26,22 @@ export default function StaffDetailPage({ staff }) {
               <img src="/images/avt_hmc.jpg" alt="" />
               <div className="chu">
                 <p>
-                  Name: <span>{staff.name}</span>
+                  Name: <span>{StaffData[_index].name}</span>
                 </p>
                 <p>
-                  Department: <span>{staff.department}</span>
+                  Department: <span>{StaffData[_index].department}</span>
                 </p>
                 <p>
-                  Phone: <span>{staff.telephone}</span>
+                  Phone: <span>{StaffData[_index].telephone}</span>
                 </p>
                 <p>
-                  Adress: <span>{staff.adress}</span>
+                  Adress: <span>{StaffData[_index].adress}</span>
                 </p>
               </div>
             </div>
             <div className="right">
               <p>
-                Position: <span>{staff.position}</span>
+                Position: <span>{StaffData[_index].position}</span>
               </p>
               <p>
                 DoB: <span>09/05/2000</span>
