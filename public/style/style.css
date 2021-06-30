@@ -11,6 +11,10 @@ button:focus {
     z-index: 1;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 i {
     font-size: 25px;
 }

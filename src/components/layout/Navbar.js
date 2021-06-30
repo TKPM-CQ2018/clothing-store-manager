@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const NavbarCustom = () => {
+import { signOut } from "../../actions/authAction";
+import { connect } from "react-redux";
+const NavbarCustom = (props) => {
     return ( 
     <section className="header">
         <div className="my-container">
@@ -21,7 +22,7 @@ const NavbarCustom = () => {
                             <i class="fas fa-chevron-circle-down"></i>
                             <div id="myDropdown" class="dropdown-content">
                                 <Link to="/">Profile</Link>
-                                <Link to="/" className='logout'>Log out</Link>
+                                <a onClick={props.signOut} className='logout'>Log out</a>
                             </div>
                         </span>
                     </div>
@@ -45,5 +46,9 @@ const NavbarCustom = () => {
         
     );
 }
-
-export default NavbarCustom;
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        signOut: ()=>dispatch(signOut()),
+    }
+}
+export default connect(null,mapDispatchToProps)(NavbarCustom);

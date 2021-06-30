@@ -12,10 +12,15 @@ import Dashboard from "./components/Dashboard";
 import ProfitPage from "./pages/profit/profitPage";
 import TopProductsPage from "./pages/profit/topProductsPage";
 import TopSalersPage from "./pages/profit/topSalersPage";
+import NavbarCustom from "./components/layout/Navbar";
+import Slidebar from "./components/layout/Slidebar";
+
 
 export default function RouterURL() {
   return (
     <div className="router-url">
+      <NavbarCustom/>
+      <Slidebar/>
       <Switch>
         <div>
           <Route exact path="/" component={Dashboard} />
