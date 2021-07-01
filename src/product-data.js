@@ -1,5 +1,5 @@
 export function getList() {
-  return fetch("http://localhost:9000/productDataAPI").then((data) =>
-    data.json()
-  );
+    return fetch("https://clothin-store-manager-api.herokuapp.com/productDataAPI").then((data) =>
+        data.json()
+    );
 }

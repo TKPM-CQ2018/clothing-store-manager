@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-const Slidebar = () => {
+import { connect } from "react-redux";
+import { signOut } from "../../actions/authAction";
+const Slidebar = (props) => {
 
     return (
         <section className="sidenav">
@@ -19,9 +21,14 @@ const Slidebar = () => {
             <hr></hr>
             <div className="title-field-sidebar">System</div>
             <Link to="/settings"> <img src="/images/settings.png" alt="dashboard" className="setting" />Setting</Link>
-            <Link to="/"> <img src="/images/logout.png" alt="dashboard" className="dashboard" />Log Out</Link>
+            <a onClick={props.signOut}> <img src="/images/logout.png" alt="dashboard" className="dashboard" />Log Out</a>
         </section>
     );
 
 }
-export default Slidebar;
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        signOut:()=>dispatch(signOut()),
+    }
+}
+export default connect(null,mapDispatchToProps)(Slidebar);
