@@ -1,5 +1,3 @@
 export function getList() {
-    return fetch("https://clothin-store-manager-api.herokuapp.com/productDataAPI").then((data) =>
-        data.json()
-    );
+  return fetch(process.env.REACT_APP_API_PRODUCT).then((data) => data.json());
 }
